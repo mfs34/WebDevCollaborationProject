@@ -14,3 +14,8 @@ jobs:
         server: files.000webhost.com
         username: wedeco12
         password: ${{ secrets.FTP_PASSWORD }}
+        protocol: ftps
+        port: 21
+    exclude: |
+      **/.git*
+      **/.git*/**
