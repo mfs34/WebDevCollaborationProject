@@ -13,11 +13,11 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        server: files.000webhost.com
+        username: wedeco12
+        password: Webdev_12
         protocol: ftps
-        port: ${{ secrets.FTP_PORT }}
+        port: 21
         exclude: .git*
           - .git*/**
           - .github
