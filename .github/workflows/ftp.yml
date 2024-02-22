@@ -19,3 +19,6 @@ jobs:
         protocol: ftps
         port: ${{ secrets.ftp_port }}
         exclude: .git*
+          - .git*/**
+          - .github
+        
