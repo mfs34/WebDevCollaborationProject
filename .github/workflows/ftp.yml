@@ -15,7 +15,7 @@ jobs:
       with:
         server: files.000webhost.com
         username: wedeco12
-        password: Webdev_12
+        password: Wedeco_12
         protocol: ftps
         port: 21
         exclude: .git*
