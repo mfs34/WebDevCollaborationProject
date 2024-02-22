@@ -1,24 +1,16 @@
-on:
-  push:
-    branches: [ ftp ]
+on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
-    name: 🎉 Auto Deploy
-    runs-on: windows-latest
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v2.3.2
-
+      uses: actions/checkout@v3
+    
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: files.000webhost.com
         username: wedeco12
-        password: ${{ secrets.FTP_PASS }}
-        protocol: ftps
-        port: 21
-        exclude: .git*
-          - .git*/**
-          - .github
-        
+        password: ${{ secrets.FTP_PASSWORD }}
