@@ -18,8 +18,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         port: 21
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          fileToExclude.txt
+        exclude: .git*
+          - .git*/**
+          - .github
